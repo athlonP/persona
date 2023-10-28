@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(h.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  #menu li {
+    margin-right: 20px;
+  }
+  
+  #circle {
+    width: 200px;
+    height: 200px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    overflow: hidden;
+  }
+  
+  #circle img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  #circle img:hover {
+    transform: scale(1.1);
+  }
+  
+  footer {
+    background-color: #007bff;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Tonos de colores de fondo */
+  
+  body {
+    background: linear-gradient(to bottom, #5a89a1, #007bff);
+  }
+  
+  header {
+    background: linear-gradient(to right, #13547a, #007bff);
+  }
+  
+  #circle {
+    background-color: #13547a;
+  }
+  
+  footer {
+    background-color: #13547a;
+  }
+  
+  /* Estilos adicionales */
+  
+  header h1 {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: none;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  header li a {
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+  
+  header li a:hover {
+    border-bottom: 2px solid #fff;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  header.scrolled {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  #content {
+    margin-top: 100px;
+  }
+  
+  header h1 {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  header.scrolled h1 {
+    color: #007bff;
+  }
+  

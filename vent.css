@@ -1,0 +1,85 @@
+/* Estilos para el botón "Agregar Stock" */
+.agregar-stock {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px; /* Tamaño de fuente más grande */
+
+    /* Estilos adicionales al pasar el ratón */
+    transition: font-size 0.3s ease;
+}
+
+.agregar-stock:hover {
+    font-size: 24px; /* Tamaño de fuente aún más grande al pasar el ratón */
+}
+
+/* Estilos para los modales */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Asegura que estén en la parte superior */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%; /* Limita el ancho del modal */
+
+    /* Estilos adicionales para centrar el contenido del modal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo adicional para el botón de cerrar en el modal */
+.modal-content .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón "Mostrar Bajo Stock" */
+.mostrar-bajo-stock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para el cuadro de "Aumentar Precio" */
+#aumentoPorcentaje {
+    width: 100px; /* Ancho más pequeño, puedes ajustar según tu preferencia */
+    height: 30px;
+    font-size: 14px; /* Tamaño de fuente más pequeño, puedes ajustar según tu preferencia */
+}
+
+/* Estilos para el botón dentro del cuadro de "Aumentar Precio" */
+.input-group-append button {
+    height: 30px; /* Alinea la altura del botón con el input */
+}
+
+
+
