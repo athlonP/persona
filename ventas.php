@@ -222,33 +222,38 @@ $query = mysqli_query($con, $sql);
     }
 
     function mostrarProductosBajoStock() {
-        const rows = document.querySelectorAll("table tbody tr");
-        const productosBajoStock = document.getElementById("productosBajoStock");
-        productosBajoStock.innerHTML = "";
+    const rows = document.querySelectorAll("table tbody tr");
+    const productosBajoStock = document.getElementById("productosBajoStock");
+    productosBajoStock.innerHTML = "";
 
-        rows.forEach(function(row) {
-            const stockElement = row.querySelector("td[id^='stock-']");
-            if (stockElement) {
-                const stock = parseInt(stockElement.textContent);
-                if (stock < 5) {
-                    const productoNombre = row.querySelector("td:nth-child(3)").textContent;
-                    const li = document.createElement("li");
-                    li.textContent = productoNombre;
-                    li.addEventListener("click", function() {
+    rows.forEach(function(row) {
+        const stockElement = row.querySelector("td[id^='stock-']");
+        if (stockElement) {
+            const stock = parseInt(stockElement.textContent);
+            if (stock < 5) {
+                const productoNombre = row.querySelector("td:nth-child(3)").textContent;
+                const li = document.createElement("li");
+                li.textContent = productoNombre;
+                li.addEventListener("click", function() {
+                    const productoIdElement = document.getElementById("ventaProductoId"); // Corregido a "ventaProductoId"
+                    if (productoIdElement) {
                         const productoId = row.querySelector("td[id^='stock-']").id.replace("stock-", "");
-                        const stockForm = document.getElementById("stockForm");
-                        stockForm.reset();
-                        document.getElementById("productoId").value = productoId;
-                        abrirStockModal();
-                    });
-                    productosBajoStock.appendChild(li);
-                }
+                        productoIdElement.value = productoId;
+                    } else {
+                        console.error("Elemento 'ventaProductoId' no encontrado.");
+                    }
+                    abrirStockModal();
+                });
+                productosBajoStock.appendChild(li);
             }
-        });
+        }
+    });
 
-        const bajoStockModal = document.getElementById("bajoStockModal");
-        bajoStockModal.style.display = "block";
-    }
+    const bajoStockModal = document.getElementById("bajoStockModal");
+    bajoStockModal.style.display = "block";
+}
+
+
 
     function abrirStockModal() {
         const modificarStockModal = document.getElementById("modificarStockModal");
